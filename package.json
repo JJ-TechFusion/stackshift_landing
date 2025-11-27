@@ -1,0 +1,12 @@
+{
+  "name": "stackshift-landing",
+  "version": "1.0.0",
+  "description": "Landing page for Stackshift.cloud",
+  "scripts": {
+    "build": "npx tailwindcss -i ./input.css -o ./styles.css --minify",
+    "watch": "npx tailwindcss -i ./input.css -o ./styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

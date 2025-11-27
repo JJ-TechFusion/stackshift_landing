@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackshift - Deploy Full-Stack Apps in Minutes</title>
+    <meta name="description" content="The hosting platform with transparent pricing. Deploy frontend, backend, and databases from GitHub. Built for developers in Africa and beyond.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body class="antialiased selection:bg-primary-light selection:text-primary">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-background border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-xl font-bold tracking-tighter">stackshift<span class="text-primary">.cloud</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#problem" class="text-sm font-medium text-gray-600 hover:text-text transition-colors">Why Stackshift</a>
+                    <a href="#solution" class="text-sm font-medium text-gray-600 hover:text-text transition-colors">Features</a>
+                    <a href="#pricing" class="text-sm font-medium text-gray-600 hover:text-text transition-colors">Pricing</a>
+                    <a href="#faq" class="text-sm font-medium text-gray-600 hover:text-text transition-colors">FAQ</a>
+                </div>
+                <div>
+                    <a href="#waitlist" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-hover transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        Join Waitlist
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                    <div class="lg:col-span-6 text-center lg:text-left mb-12 lg:mb-0 fade-in">
+                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tighter mb-6 leading-[1.1]">
+                            Shift your stack.<br>
+                            Ship anywhere.
+                        </h1>
+                        <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Deploy full-stack apps in minutes. Transparent pricing. No DevOps degree required.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
+                            <form class="w-full sm:w-auto flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault();">
+                                <input type="email" placeholder="Enter your email" class="px-4 py-3 rounded-md border border-border bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none min-w-[280px]" required>
+                                <button type="submit" class="px-6 py-3 rounded-md bg-primary text-white font-medium hover:bg-primary-hover transition-colors whitespace-nowrap">
+                                    Join Waitlist
+                                </button>
+                            </form>
+                        </div>
+                        <p class="text-sm text-gray-500">
+                            Launching March 2025. First 100 users get 3 months free Pro.
+                        </p>
+                    </div>
+                    
+                    <div class="lg:col-span-6 fade-in animation-delay-200">
+                        <div class="bg-[#1e1e1e] rounded-lg shadow-lg overflow-hidden border border-gray-800 font-mono text-sm leading-relaxed">
+                            <div class="flex items-center px-4 py-3 bg-[#2d2d2d] border-b border-gray-700">
+                                <div class="flex space-x-2">
+                                    <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                                    <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                                    <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+                                </div>
+                                <div class="ml-4 text-gray-400 text-xs">user@macbook:~/my-app</div>
+                            </div>
+                            <div class="p-6 text-gray-300 min-h-[320px]" id="terminal-content">
+                                <!-- Content injected by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section id="problem" class="py-20 bg-white border-y border-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-scroll">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Deployment shouldn't cost you sleep.</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Stop worrying about surprise bills and fragmented infrastructure.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Pain Point 1 -->
+                    <div class="p-8 rounded-lg bg-background border border-border fade-in-scroll animation-delay-100">
+                        <div class="text-2xl mb-4">💸</div>
+                        <h3 class="text-xl font-bold mb-3">Bill Shock</h3>
+                        <p class="text-gray-600 italic">"Railway burned through $47 in credits overnight. You found out when your app stopped."</p>
+                    </div>
+                    
+                    <!-- Pain Point 2 -->
+                    <div class="p-8 rounded-lg bg-background border border-border fade-in-scroll animation-delay-200">
+                        <div class="text-2xl mb-4">🧩</div>
+                        <h3 class="text-xl font-bold mb-3">Platform Juggling</h3>
+                        <p class="text-gray-600 italic">"Frontend on Vercel. Backend on Render. Database on... wait, where did you put that?"</p>
+                    </div>
+                    
+                    <!-- Pain Point 3 -->
+                    <div class="p-8 rounded-lg bg-background border border-border fade-in-scroll animation-delay-300">
+                        <div class="text-2xl mb-4">🌍</div>
+                        <h3 class="text-xl font-bold mb-3">African Tax</h3>
+                        <p class="text-gray-600 italic">"500ms latency from Lagos because the nearest server is in Frankfurt."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section id="solution" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-scroll">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">One platform. Zero surprises.</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="p-8 rounded-lg border border-border bg-white hover:border-primary/50 transition-colors fade-in-scroll">
+                        <div class="mb-6">
+                            <span class="inline-block p-3 rounded-md bg-primary-light text-primary mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </span>
+                            <h3 class="text-2xl font-bold mb-2">5-Minute Deploys</h3>
+                            <p class="text-gray-600 mb-6">Connect GitHub. Push code. Done. We handle the build and deployment pipeline automatically.</p>
+                        </div>
+                        <div class="bg-[#1e1e1e] rounded p-4 font-mono text-xs text-gray-300">
+                            <div class="flex justify-between text-gray-500 mb-2"><span>stackshift.config.js</span></div>
+                            <pre><code class="language-javascript">export default {
+  framework: 'nextjs',
+  buildCommand: 'npm run build',
+  region: 'af-south-1'
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="p-8 rounded-lg border border-border bg-white hover:border-primary/50 transition-colors fade-in-scroll animation-delay-100">
+                        <div class="mb-6">
+                            <span class="inline-block p-3 rounded-md bg-primary-light text-primary mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </span>
+                            <h3 class="text-2xl font-bold mb-2">Transparent Pricing</h3>
+                            <p class="text-gray-600 mb-6">Real-time usage dashboard. Set monthly spending caps so you never get a surprise bill.</p>
+                        </div>
+                        <!-- Calculator Widget -->
+                        <div class="bg-background border border-border rounded p-4">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="font-mono text-sm">Est. Monthly Cost</span>
+                                <span class="font-bold text-xl" id="calc-total">$10</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="flex justify-between text-xs text-gray-500 mb-1">
+                                        <span>Projects</span>
+                                        <span id="calc-projects-val">2</span>
+                                    </div>
+                                    <input type="range" min="1" max="10" value="2" class="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary" id="calc-projects">
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs text-gray-500 mb-1">
+                                        <span>RAM / Project</span>
+                                        <span id="calc-ram-val">1GB</span>
+                                    </div>
+                                    <input type="range" min="1" max="4" value="2" class="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary" id="calc-ram">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="p-8 rounded-lg border border-border bg-white hover:border-primary/50 transition-colors fade-in-scroll">
+                        <div class="mb-6">
+                            <span class="inline-block p-3 rounded-md bg-primary-light text-primary mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </span>
+                            <h3 class="text-2xl font-bold mb-2">Deploy Anywhere</h3>
+                            <p class="text-gray-600 mb-6">US East, Europe, Cape Town. Choose your region for <50ms latency.</p>
+                        </div>
+                        <div class="relative h-32 bg-background rounded border border-border flex items-center justify-center overflow-hidden">
+                            <!-- Simple map abstraction -->
+                            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 10px 10px;"></div>
+                            <div class="flex space-x-8 items-end">
+                                <div class="flex flex-col items-center group cursor-default">
+                                    <div class="w-2 h-2 bg-gray-400 rounded-full mb-1 group-hover:bg-primary transition-colors"></div>
+                                    <span class="text-[10px] text-gray-500 font-mono">US-EAST</span>
+                                </div>
+                                <div class="flex flex-col items-center group cursor-default">
+                                    <div class="w-2 h-2 bg-gray-400 rounded-full mb-1 group-hover:bg-primary transition-colors"></div>
+                                    <span class="text-[10px] text-gray-500 font-mono">EU-WEST</span>
+                                </div>
+                                <div class="flex flex-col items-center group cursor-default">
+                                    <div class="w-2 h-2 bg-primary rounded-full mb-1 animate-pulse"></div>
+                                    <span class="text-[10px] text-primary font-mono font-bold">AF-SOUTH</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="p-8 rounded-lg border border-border bg-white hover:border-primary/50 transition-colors fade-in-scroll animation-delay-100">
+                        <div class="mb-6">
+                            <span class="inline-block p-3 rounded-md bg-primary-light text-primary mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                            </span>
+                            <h3 class="text-2xl font-bold mb-2">Full Stack Support</h3>
+                            <p class="text-gray-600 mb-6">Frontend (Next.js, React), Backend (Node, Go), Database (Postgres, Redis). All in one place.</p>
+                        </div>
+                        <div class="flex flex-col space-y-2 font-mono text-xs">
+                            <div class="flex items-center p-2 bg-background border border-border rounded">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                                <span>frontend-app</span>
+                                <span class="ml-auto text-green-600">● running</span>
+                            </div>
+                            <div class="flex items-center p-2 bg-background border border-border rounded">
+                                <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                                <span>api-server</span>
+                                <span class="ml-auto text-green-600">● running</span>
+                            </div>
+                            <div class="flex items-center p-2 bg-background border border-border rounded">
+                                <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                                <span>postgres-db</span>
+                                <span class="ml-auto text-green-600">● healthy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="py-20 bg-white border-y border-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-scroll">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">From push to production in three steps.</h2>
+                </div>
+
+                <div class="relative">
+                    <!-- Line connecting steps (desktop) -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -translate-y-1/2 z-0"></div>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 relative z-10">
+                        <!-- Step 1 -->
+                        <div class="bg-white p-6 text-center fade-in-scroll">
+                            <div class="w-16 h-16 mx-auto bg-background border border-border rounded-full flex items-center justify-center mb-4 text-2xl">
+                                🔗
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">1. Connect GitHub</h3>
+                            <p class="text-sm text-gray-600">Auto-detect framework</p>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="bg-white p-6 text-center fade-in-scroll animation-delay-100">
+                            <div class="w-16 h-16 mx-auto bg-background border border-border rounded-full flex items-center justify-center mb-4 text-2xl">
+                                ⚙️
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">2. Configure</h3>
+                            <p class="text-sm text-gray-600">Set env variables & region</p>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="bg-white p-6 text-center fade-in-scroll animation-delay-200">
+                            <div class="w-16 h-16 mx-auto bg-background border border-border rounded-full flex items-center justify-center mb-4 text-2xl">
+                                🚀
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">3. Deploy</h3>
+                            <p class="text-sm text-gray-600">Live in < 5min</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-scroll">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Pricing that makes sense. Finally.</h2>
+                    <p class="text-lg text-gray-600">No hidden fees. No bandwidth surprises. No asterisks.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Free Tier -->
+                    <div class="border border-border rounded-lg p-8 bg-white hover:shadow-lg transition-shadow fade-in-scroll">
+                        <h3 class="text-xl font-bold mb-2">Free</h3>
+                        <div class="text-3xl font-bold mb-6">$0</div>
+                        <ul class="space-y-4 mb-8 text-sm text-gray-600">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 2 projects</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 512MB RAM</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 10GB bandwidth</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Community support</li>
+                        </ul>
+                        <a href="#waitlist" class="block w-full py-2 px-4 border border-border rounded text-center text-sm font-medium hover:bg-gray-50 transition-colors">Start Free</a>
+                    </div>
+
+                    <!-- Starter Tier -->
+                    <div class="border-2 border-primary rounded-lg p-8 bg-white relative fade-in-scroll animation-delay-100">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-3 py-1 text-xs font-bold rounded-full">RECOMMENDED</div>
+                        <h3 class="text-xl font-bold mb-2">Starter</h3>
+                        <div class="text-3xl font-bold mb-6">$10<span class="text-base font-normal text-gray-500">/mo</span></div>
+                        <ul class="space-y-4 mb-8 text-sm text-gray-600">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 5 projects</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 1GB RAM</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 50GB bandwidth</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Email support</li>
+                        </ul>
+                        <a href="#waitlist" class="block w-full py-2 px-4 bg-primary text-white rounded text-center text-sm font-medium hover:bg-primary-hover transition-colors">Join Waitlist</a>
+                    </div>
+
+                    <!-- Pro Tier -->
+                    <div class="border border-border rounded-lg p-8 bg-white hover:shadow-lg transition-shadow fade-in-scroll animation-delay-200">
+                        <h3 class="text-xl font-bold mb-2">Pro</h3>
+                        <div class="text-3xl font-bold mb-6">$25<span class="text-base font-normal text-gray-500">/mo</span></div>
+                        <ul class="space-y-4 mb-8 text-sm text-gray-600">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Unlimited projects</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 2GB RAM</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 200GB bandwidth</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Priority support</li>
+                        </ul>
+                        <a href="#waitlist" class="block w-full py-2 px-4 border border-border rounded text-center text-sm font-medium hover:bg-gray-50 transition-colors">Join Waitlist</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-20 bg-background border-t border-border">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-scroll">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Questions?</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="border border-border rounded-lg bg-white overflow-hidden fade-in-scroll">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-medium">How is this different from Vercel/Railway?</span>
+                            <span class="transform transition-transform text-gray-400">▼</span>
+                        </button>
+                        <div class="hidden px-6 pb-4 text-gray-600 text-sm">
+                            We focus on transparent pricing and African infrastructure. No hidden bandwidth fees, and we have dedicated regions in Cape Town and Lagos for low latency.
+                        </div>
+                    </div>
+
+                    <div class="border border-border rounded-lg bg-white overflow-hidden fade-in-scroll">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-medium">What frameworks do you support?</span>
+                            <span class="transform transition-transform text-gray-400">▼</span>
+                        </button>
+                        <div class="hidden px-6 pb-4 text-gray-600 text-sm">
+                            We support any Docker-based deployment. Native support for Next.js, React, Vue, Node.js, Go, Python, and Rust.
+                        </div>
+                    </div>
+
+                    <div class="border border-border rounded-lg bg-white overflow-hidden fade-in-scroll">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-medium">What happens if I hit my spending cap?</span>
+                            <span class="transform transition-transform text-gray-400">▼</span>
+                        </button>
+                        <div class="hidden px-6 pb-4 text-gray-600 text-sm">
+                            We'll notify you at 80% and 100%. You can choose to auto-scale (pay more) or pause non-critical services. We never charge you without permission.
+                        </div>
+                    </div>
+                    
+                    <div class="border border-border rounded-lg bg-white overflow-hidden fade-in-scroll">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-medium">When can I start deploying?</span>
+                            <span class="transform transition-transform text-gray-400">▼</span>
+                        </button>
+                        <div class="hidden px-6 pb-4 text-gray-600 text-sm">
+                            We are launching our public beta in March 2025. Join the waitlist to get early access and 3 months of Pro for free.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="waitlist" class="py-20 bg-white border-t border-border">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Join 100+ developers on the waitlist.</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Be first to deploy when we launch in March 2025.
+                </p>
+                
+                <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 mb-8" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-md border border-border bg-background focus:ring-2 focus:ring-primary focus:border-primary outline-none" required>
+                    <button type="submit" class="px-6 py-3 rounded-md bg-primary text-white font-medium hover:bg-primary-hover transition-colors whitespace-nowrap">
+                        Join Waitlist
+                    </button>
+                </form>
+                
+                <div class="text-sm text-gray-500">
+                    <p>Built with ❤️ in Abuja, Nigeria</p>
+                    <p>For developers, by developers</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-background border-t border-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-lg font-bold tracking-tighter">stackshift<span class="text-primary">.cloud</span></span>
+                    <p class="text-sm text-gray-500 mt-1">Shift your stack. Ship anywhere.</p>
+                </div>
+                <div class="flex space-x-6 text-sm text-gray-600">
+                    <a href="#" class="hover:text-text">Twitter</a>
+                    <a href="#" class="hover:text-text">GitHub</a>
+                    <a href="#" class="hover:text-text">Terms</a>
+                    <a href="#" class="hover:text-text">Privacy</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center md:text-left text-xs text-gray-400">
+                &copy; 2024 Stackshift. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
