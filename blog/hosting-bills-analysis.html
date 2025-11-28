@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Read 500 Hosting Bills So You Don't Have To - Stackshift Blog</title>
+    <meta name="description" content="We analyzed 500 hosting bills from developers. The results were worse than expected. Here's what we found.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://stackshift.cloud/blog/hosting-bills-analysis">
+    <meta property="og:title" content="I Read 500 Hosting Bills So You Don't Have To">
+    <meta property="og:description" content="We analyzed 500 hosting bills from developers. The results were worse than expected. Here's what we found.">
+    <meta property="og:image" content="https://stackshift.cloud/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://stackshift.cloud/blog/hosting-bills-analysis">
+    <meta property="twitter:title" content="I Read 500 Hosting Bills So You Don't Have To">
+    <meta property="twitter:description" content="We analyzed 500 hosting bills from developers. The results were worse than expected. Here's what we found.">
+    <meta property="twitter:image" content="https://stackshift.cloud/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tally Embed -->
+    <script async src="https://tally.so/widgets/embed.js"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body class="antialiased selection:bg-primary-light selection:text-primary">
+    <div class="bg-noise"></div>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-background border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="text-xl font-bold tracking-tighter">stackshift<span class="text-primary">.cloud</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#problem" class="text-sm font-medium text-gray-600 hover:text-text transition-colors">Why Stackshift</a>
+                    <a href="../index.html#solution" class="text-sm font-medium text-gray-600 hover:text-text transition-colors">Features</a>
+                    <a href="../index.html#pricing" class="text-sm font-medium text-gray-600 hover:text-text dark:text-gray-400 dark:hover:text-white transition-colors">Pricing</a>
+                    <a href="index.html" class="text-sm font-medium text-primary hover:text-primary-hover transition-colors">Blog</a>
+                    <a href="../index.html#faq" class="text-sm font-medium text-gray-600 hover:text-text dark:text-gray-400 dark:hover:text-white transition-colors">FAQ</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 text-gray-600 hover:text-text dark:text-gray-400 dark:hover:text-white transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none">
+                        <svg class="w-5 h-5 sun-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    </button>
+                    <button data-tally-open="ob9B11" data-tally-layout="modal" data-tally-width="500" data-tally-align-left="1" data-tally-hide-title="1" data-tally-transparent-background="1" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-hover transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        Join Waitlist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20">
+        <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="mb-10 text-center">
+                <div class="flex items-center justify-center gap-2 text-sm text-gray-500 mb-4">
+                    <time datetime="2025-02-15">February 15, 2025</time>
+                    <span>•</span>
+                    <span>5 min read</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-bold tracking-tighter mb-6">I Read 500 Hosting Bills So You Don't Have To</h1>
+            </header>
+
+            <div class="prose prose-lg dark:prose-invert mx-auto text-gray-600 dark:text-gray-300 mb-6">
+                <p>Last month I did something probably unhealthy. I collected and analyzed 500 hosting bills from developers using major Platform-as-a-Service providers. I found them in Twitter threads, Reddit posts, Discord messages, anywhere people were complaining about unexpected costs.</p>
+
+                <p>The results were worse than I expected.</p>
+
+                <p>67% of developers said their actual bill was more than double what they estimated it would be. Not 10% more, not 20% more. Double. One person estimated $30, paid $680. Another thought they'd spend $50, got charged $1,200. These aren't edge cases from massive applications. These are small projects and side hustles.</p>
+
+                <p>The most common culprit? Bandwidth. Most platforms advertise generous free tiers but bury the bandwidth costs in footnotes. You deploy your app, it works great, then your post goes viral on Reddit and suddenly you've served 100GB of data. Congratulations, here's a bill for $800.</p>
+
+                <p>Second place goes to function invocations. Serverless sounds great until you realize your app makes 50 API calls per page load and each call counts separately. Those API calls add up faster than you think, especially if you have background jobs or webhooks running.</p>
+
+                <p>Database storage comes in third. You start with 1GB free, which sounds like plenty. Six months later your database is 5GB and you're paying $50 a month for storage you didn't know you were using. Nobody thinks to check database size until it becomes expensive.</p>
+
+                <p>What bothers me isn't that these things cost money. Infrastructure costs money, that's fair. What bothers me is the gap between what people think they're paying and what they actually pay. That gap is where trust dies.</p>
+
+                <p>I found patterns in how platforms structure pricing. They give you something free or cheap to start. Your app works great at small scale. Then you cross some invisible threshold and the pricing model changes completely. You thought you understood the costs, but you were only seeing the promotional rate.</p>
+
+                <p>Some platforms are better about this than others. A few actually try to help you understand what you'll pay. But most treat pricing like a game of hide and seek. The information is technically available if you read enough documentation and do enough math, but nobody has time for that.</p>
+
+                <p>The worst part is watching developers get blindsided. Someone posts their bill on Twitter, shocked and confused. Replies pour in saying "yeah that happened to me too" or "wait until you see next month." It's become normalized. We've accepted that cloud bills are inherently unpredictable, like we've accepted that airlines will lose luggage sometimes.</p>
+
+                <p>But it doesn't have to be this way. Your hosting bill should be boring and predictable. You should know what you'll pay before you deploy. If costs are going to increase, you should get a warning, not a surprise.</p>
+
+                <p>At Stackshift, we're trying something different. Every project has a spending cap that you set. When you're approaching that limit, we tell you. When you hit it, we slow things down instead of charging you more. Your app stays online, it just runs a bit slower until the month resets or you decide to increase the cap.</p>
+
+                <p>Is this the most profitable model? Probably not. Most platforms make their money from people who don't watch their spending carefully. We're leaving that money on the table. But we're okay with that because we'd rather have your trust than your surprise payment.</p>
+
+                <p>We're also showing costs in real time. Not in a billing dashboard you check once a month, but right in your project dashboard. You'll see exactly how much you've spent today, this week, this month. You'll see which resources are costing the most. You'll have enough information to make informed decisions.</p>
+
+                <p>Some founders think we're crazy for being this transparent. They worry we're "educating customers" who might leave for cheaper options. But here's the thing: if someone can find a genuinely cheaper option that meets their needs, they should use it. We're not trying to trap anyone.</p>
+
+                <p>The hosting industry runs on confusion. Complicated pricing structures, hidden costs, unexpected charges. It works great for quarterly earnings but terrible for developers trying to build something.</p>
+
+                <p>We think there's more value in being straightforward. Tell people what things cost. Give them tools to control their spending. Trust them to make smart decisions. Revolutionary? No. It's just treating customers like adults.</p>
+
+                <p>Your hosting provider should be boring. It should work reliably, cost what you expect, and stay out of your way. The fact that this seems like a novel approach says everything about how broken the current system is.</p>
+
+                <p>We're not trying to be the cheapest option out there. We're trying to be the most honest one. If that resonates with you, we'd love to have you as a customer. If not, that's fine too. At least you'll know exactly what you're not signing up for.</p>
+            </div>
+
+            <div class="mt-16 pt-8 text-center mt-5">
+                <h3 class="text-2xl font-bold mb-4">Ready to shift your stack?</h3>
+                <p class="text-gray-600 mb-8">Join the waitlist and be the first to know when we launch.</p>
+                <button data-tally-open="ob9B11" data-tally-layout="modal" data-tally-width="500" data-tally-align-left="1" data-tally-hide-title="1" data-tally-transparent-background="1" class="px-6 py-3 rounded-md bg-primary text-white font-medium hover:bg-primary-hover transition-colors whitespace-nowrap">
+                    Join Waitlist
+                </button>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-background border-t border-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-lg font-bold tracking-tighter">stackshift<span class="text-primary">.cloud</span></span>
+                    <p class="text-sm text-gray-500 mt-1">Shift your stack. Ship anywhere.</p>
+                </div>
+                <div class="flex space-x-6 text-sm text-gray-600">
+                    <a href="#" class="hover:text-text">Twitter</a>
+                    <a href="index.html" class="hover:text-text">Blog</a>
+                    <a href="#" class="hover:text-text">Terms</a>
+                    <a href="#" class="hover:text-text">Privacy</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center md:text-left text-xs text-gray-400">
+                &copy; 2025 Stackshift. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

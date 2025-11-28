@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 500 Millisecond Problem - Stackshift Blog</title>
+    <meta name="description" content="Latency matters. For users in Africa, the internet feels slow because the servers are far away. We're fixing that.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://stackshift.cloud/blog/the-500-millisecond-problem">
+    <meta property="og:title" content="The 500 Millisecond Problem">
+    <meta property="og:description" content="Latency matters. For users in Africa, the internet feels slow because the servers are far away. We're fixing that.">
+    <meta property="og:image" content="https://stackshift.cloud/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://stackshift.cloud/blog/the-500-millisecond-problem">
+    <meta property="twitter:title" content="The 500 Millisecond Problem">
+    <meta property="twitter:description" content="Latency matters. For users in Africa, the internet feels slow because the servers are far away. We're fixing that.">
+    <meta property="twitter:image" content="https://stackshift.cloud/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tally Embed -->
+    <script async src="https://tally.so/widgets/embed.js"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body class="antialiased selection:bg-primary-light selection:text-primary">
+    <div class="bg-noise"></div>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-background border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="text-xl font-bold tracking-tighter">stackshift<span class="text-primary">.cloud</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#problem" class="text-sm font-medium text-gray-600 hover:text-text transition-colors">Why Stackshift</a>
+                    <a href="../index.html#solution" class="text-sm font-medium text-gray-600 hover:text-text transition-colors">Features</a>
+                    <a href="../index.html#pricing" class="text-sm font-medium text-gray-600 hover:text-text dark:text-gray-400 dark:hover:text-white transition-colors">Pricing</a>
+                    <a href="index.html" class="text-sm font-medium text-primary hover:text-primary-hover transition-colors">Blog</a>
+                    <a href="../index.html#faq" class="text-sm font-medium text-gray-600 hover:text-text dark:text-gray-400 dark:hover:text-white transition-colors">FAQ</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 text-gray-600 hover:text-text dark:text-gray-400 dark:hover:text-white transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none">
+                        <svg class="w-5 h-5 sun-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    </button>
+                    <button data-tally-open="ob9B11" data-tally-layout="modal" data-tally-width="500" data-tally-align-left="1" data-tally-hide-title="1" data-tally-transparent-background="1" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-hover transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        Join Waitlist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20">
+        <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="mb-10 text-center">
+                <div class="flex items-center justify-center gap-2 text-sm text-gray-500 mb-4">
+                    <time datetime="2025-02-20">February 20, 2025</time>
+                    <span>•</span>
+                    <span>3 min read</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-bold tracking-tighter mb-6">The 500 Millisecond Problem</h1>
+            </header>
+
+            <div class="prose prose-lg dark:prose-invert mx-auto text-gray-600 dark:text-gray-300 mb-6">
+                <p>My friend Sarah runs an online marketplace in Lagos connecting freelancers with local businesses. She built it herself over six months, got some early users through word of mouth, and things were growing steadily. Everything seemed fine until she noticed something weird in her analytics. Users would start filling out their profile, then abandon it halfway through. Her completion rate was terrible compared to similar platforms.</p>
+
+                <p>She spent weeks trying to fix it. Simplified the forms, reduced the number of fields, added progress indicators. Nothing worked. Then someone suggested she check where her server was actually hosted.</p>
+
+                <p>Frankfurt. Every time someone uploaded a profile photo or saved their information, the request traveled to Germany and back. For users in Lagos, each interaction took about 500 milliseconds. Half a second doesn't sound like much until you realize it's happening on every single action. Click to add a skill, wait. Upload a photo, wait. Save your bio, wait.</p>
+
+                <p>Users don't consciously notice 500ms. They just feel like your app is slow and leave. The data backs this up. Amazon found that every 100ms of latency costs them 1% in sales. Google discovered that an extra half second in search results could decrease traffic by 20%. These companies obsess over milliseconds because milliseconds matter.</p>
+
+                <p>But if you're building in Africa, your options are limited. The major cloud providers have data centers in Europe and the US. Some have expanded to Asia. Africa? Not so much. There's one region in South Africa, which helps if your users are in Johannesburg but does nothing if they're in Nigeria, Kenya, or Ghana.</p>
+
+                <p>So you deploy to Europe and accept the latency tax. Your users in London get 20ms response times while your users in Lagos get 500ms. Same product, wildly different experience. And you pay the same price for both.</p>
+
+                <p>This isn't just a technical problem. It's an economic one. Startups in Africa are competing with global companies that have better infrastructure access. A user comparing your product to an international competitor isn't thinking about where the servers are. They just know one feels fast and one feels slow.</p>
+
+                <p>The standard advice is to use a CDN for static assets, which helps with images and scripts. But your API calls still make that round trip. Your database queries still cross an ocean. Your real-time features still lag. CDNs solve maybe 30% of the problem.</p>
+
+                <p>Some companies solve this by raising enough money to negotiate custom deals with cloud providers. They get priority access to new regions, special pricing, dedicated support. If you can't raise millions, you're stuck with whatever consumer-grade solution exists.</p>
+
+                <p>We started building Stackshift because we got tired of explaining to founders why their infrastructure choices were limited by geography. The technology to fix this exists. The fiber optic cables are already laid. The data centers are already built in African cities. What's missing is platforms that actually use them.</p>
+
+                <p>When we launch, you'll be able to deploy to Cape Town or Lagos as easily as you deploy to Frankfurt. Same price, same interface, same features. Your users in Africa will get the same experience as users anywhere else. Not because we're doing anything revolutionary, but because we're doing the obvious thing that nobody else bothered to do.</p>
+
+                <p>Latency matters. Your users might not know why your app feels slow, but they'll definitely know it feels slow. And slow apps don't win, regardless of how good everything else is.</p>
+
+                <p>The internet was supposed to make geography irrelevant. For people building in Africa, it just moved the disadvantage from access to performance. We can fix that. It just requires actually caring about it.</p>
+            </div>
+
+            <div class="mt-16 pt-8 text-center mt-5">
+                <h3 class="text-2xl font-bold mb-4">Ready to shift your stack?</h3>
+                <p class="text-gray-600 mb-8">Join the waitlist and be the first to know when we launch.</p>
+                <button data-tally-open="ob9B11" data-tally-layout="modal" data-tally-width="500" data-tally-align-left="1" data-tally-hide-title="1" data-tally-transparent-background="1" class="px-6 py-3 rounded-md bg-primary text-white font-medium hover:bg-primary-hover transition-colors whitespace-nowrap">
+                    Join Waitlist
+                </button>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-background border-t border-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-lg font-bold tracking-tighter">stackshift<span class="text-primary">.cloud</span></span>
+                    <p class="text-sm text-gray-500 mt-1">Shift your stack. Ship anywhere.</p>
+                </div>
+                <div class="flex space-x-6 text-sm text-gray-600">
+                    <a href="#" class="hover:text-text">Twitter</a>
+                    <a href="index.html" class="hover:text-text">Blog</a>
+                    <a href="#" class="hover:text-text">Terms</a>
+                    <a href="#" class="hover:text-text">Privacy</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center md:text-left text-xs text-gray-400">
+                &copy; 2025 Stackshift. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

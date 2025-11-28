@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why We Built Stackshift - Stackshift Blog</title>
+    <meta name="description" content="The cloud hosting world has split into two camps: simple but expensive, or cheap but complex. We're building the third option.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://stackshift.cloud/blog/why-we-built-stackshift">
+    <meta property="og:title" content="Why We Built Stackshift">
+    <meta property="og:description" content="The cloud hosting world has split into two camps: simple but expensive, or cheap but complex. We're building the third option.">
+    <meta property="og:image" content="https://stackshift.cloud/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://stackshift.cloud/blog/why-we-built-stackshift">
+    <meta property="twitter:title" content="Why We Built Stackshift">
+    <meta property="twitter:description" content="The cloud hosting world has split into two camps: simple but expensive, or cheap but complex. We're building the third option.">
+    <meta property="twitter:image" content="https://stackshift.cloud/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tally Embed -->
+    <script async src="https://tally.so/widgets/embed.js"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body class="antialiased selection:bg-primary-light selection:text-primary">
+    <div class="bg-noise"></div>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-background border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="text-xl font-bold tracking-tighter">stackshift<span class="text-primary">.cloud</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#problem" class="text-sm font-medium text-gray-600 hover:text-text transition-colors">Why Stackshift</a>
+                    <a href="../index.html#solution" class="text-sm font-medium text-gray-600 hover:text-text transition-colors">Features</a>
+                    <a href="../index.html#pricing" class="text-sm font-medium text-gray-600 hover:text-text dark:text-gray-400 dark:hover:text-white transition-colors">Pricing</a>
+                    <a href="index.html" class="text-sm font-medium text-primary hover:text-primary-hover transition-colors">Blog</a>
+                    <a href="../index.html#faq" class="text-sm font-medium text-gray-600 hover:text-text dark:text-gray-400 dark:hover:text-white transition-colors">FAQ</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 text-gray-600 hover:text-text dark:text-gray-400 dark:hover:text-white transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none">
+                        <svg class="w-5 h-5 sun-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    </button>
+                    <button data-tally-open="ob9B11" data-tally-layout="modal" data-tally-width="500" data-tally-align-left="1" data-tally-hide-title="1" data-tally-transparent-background="1" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-hover transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        Join Waitlist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20">
+        <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="mb-10 text-center">
+                <div class="flex items-center justify-center gap-2 text-sm text-gray-500 mb-4">
+                    <time datetime="2025-02-28">February 28, 2025</time>
+                    <span>•</span>
+                    <span>4 min read</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-bold tracking-tighter mb-6">Why We Built Stackshift</h1>
+            </header>
+
+            <div class="prose prose-lg dark:prose-invert mx-auto text-gray-600 dark:text-gray-300 mb-6">
+                <p>I spent three hours yesterday explaining to a friend why his hosting bill was $347 when he expected $25. His Next.js app got some traction on Reddit, traffic spiked for a few hours, and suddenly he owed more than his rent.</p>
+
+                <p>This isn't rare. This is normal now.</p>
+
+                <p>The cloud hosting world has split into two camps. On one side, you have the platforms that make deployment dead simple. Push to GitHub, watch the magic happen, your app is live in minutes. It feels amazing until the bill arrives. Bandwidth costs that scale exponentially. Function invocations you didn't even know were happening. Suddenly you're paying enterprise prices for your side project.</p>
+
+                <p>On the other side, you have the hyperscalers. They're cheap if you know what you're doing, but "knowing what you're doing" means understanding VPCs, security groups, load balancers, auto-scaling policies, and about fifty other concepts that have nothing to do with your actual product. You wanted to build a todo app, not become a solutions architect.</p>
+
+                <p>I've been on both sides of this. I've paid the premium for simplicity and regretted it when my card got declined because of a surprise bill. I've also spent entire weekends configuring infrastructure when I should have been shipping features. Both paths suck in their own special way.</p>
+
+                <p>Here's what frustrates me most: it doesn't have to be this complicated. The technology exists to make deployment simple AND affordable. The business models just haven't caught up.</p>
+
+                <p>Most platforms optimize for their revenue, not your success. They want you to start cheap and scale expensive. The free tier hooks you, you build your product on their platform, you get users, and then the pricing model reveals itself. By then you're too invested to leave easily. Some call this smart business. I call it predatory.</p>
+
+                <p>We're building Stackshift because we believe there's a third option. You shouldn't have to choose between developer experience and fair pricing. You shouldn't need a devops team to deploy a web app. And you definitely shouldn't be surprised by your bill.</p>
+
+                <p>The tech industry has normalized chaos. We've accepted that understanding your hosting costs requires a spreadsheet and a prayer. We've decided that deployment should either be expensive or complicated, pick one. We've agreed that this is just how things are.</p>
+
+                <p>But it's not. We can do better.</p>
+
+                <p>Stackshift isn't trying to be the cheapest option or the fanciest option. We're trying to be the honest option. You'll know exactly what you're paying for. You'll see your costs in real time. You'll set a spending cap and actually stay under it. When something costs more, we'll tell you why before you commit.</p>
+
+                <p>Is this revolutionary? No. It's basic respect for your time and money. The fact that this feels different says more about the industry than it does about us.</p>
+
+                <p>We're building this in public, mistakes and all. We're starting with the African market because that's where the infrastructure gap is most obvious, but the problem exists everywhere. Developers in Lagos and developers in London both deserve better than what they're getting.</p>
+
+                <p>Some people will say we're naive. That this business model can't work. That eventually we'll have to nickel and dime users like everyone else. Maybe they're right. But we're going to try anyway, because the alternative is accepting that this is as good as it gets.</p>
+
+                <p>And I don't accept that.</p>
+            </div>
+
+            <div class="mt-16 pt-8 text-center">
+                <h3 class="text-2xl font-bold mb-4">Ready to shift your stack?</h3>
+                <p class="text-gray-600 mb-8">Join the waitlist and be the first to know when we launch.</p>
+                <button data-tally-open="ob9B11" data-tally-layout="modal" data-tally-width="500" data-tally-align-left="1" data-tally-hide-title="1" data-tally-transparent-background="1" class="px-6 py-3 rounded-md bg-primary text-white font-medium hover:bg-primary-hover transition-colors whitespace-nowrap">
+                    Join Waitlist
+                </button>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-background border-t border-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-lg font-bold tracking-tighter">stackshift<span class="text-primary">.cloud</span></span>
+                    <p class="text-sm text-gray-500 mt-1">Shift your stack. Ship anywhere.</p>
+                </div>
+                <div class="flex space-x-6 text-sm text-gray-600">
+                    <a href="#" class="hover:text-text">Twitter</a>
+                    <a href="index.html" class="hover:text-text">Blog</a>
+                    <a href="#" class="hover:text-text">Terms</a>
+                    <a href="#" class="hover:text-text">Privacy</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center md:text-left text-xs text-gray-400">
+                &copy; 2025 Stackshift. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
