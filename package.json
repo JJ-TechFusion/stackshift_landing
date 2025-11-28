@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Landing page for Stackshift.cloud",
   "scripts": {
-    "build": "npx tailwindcss -i ./input.css -o ./styles.css --minify",
+    "build": "rm -rf dist && mkdir dist && npx tailwindcss -i ./input.css -o ./dist/styles.css --minify && cp index.html blog.html script.js favicon.svg dist/",
     "watch": "npx tailwindcss -i ./input.css -o ./styles.css --watch"
   },
   "devDependencies": {
