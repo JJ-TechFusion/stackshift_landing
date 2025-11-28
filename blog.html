@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Stackshift</title>
+    <meta name="description" content="Engineering and product updates from the Stackshift team.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stackshift.cloud/blog">
+    <meta property="og:title" content="Blog - Stackshift">
+    <meta property="og:description" content="Engineering and product updates from the Stackshift team.">
+    <meta property="og:image" content="https://stackshift.cloud/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://stackshift.cloud/blog">
+    <meta property="twitter:title" content="Blog - Stackshift">
+    <meta property="twitter:description" content="Engineering and product updates from the Stackshift team.">
+    <meta property="twitter:image" content="https://stackshift.cloud/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tally Embed -->
+    <script async src="https://tally.so/widgets/embed.js"></script>
+
+    <!-- Styles -->
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body class="antialiased selection:bg-primary-light selection:text-primary flex flex-col min-h-screen">
+    <div class="bg-noise"></div>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-background border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-xl font-bold tracking-tighter">stackshift<span class="text-primary">.cloud</span></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#problem" class="text-sm font-medium text-gray-600 hover:text-text transition-colors">Why Stackshift</a>
+                    <a href="index.html#solution" class="text-sm font-medium text-gray-600 hover:text-text transition-colors">Features</a>
+                    <a href="index.html#pricing" class="text-sm font-medium text-gray-600 hover:text-text dark:text-gray-400 dark:hover:text-white transition-colors">Pricing</a>
+                    <a href="blog.html" class="text-sm font-medium text-text dark:text-white transition-colors">Blog</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 text-gray-600 hover:text-text dark:text-gray-400 dark:hover:text-white transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none">
+                        <!-- Sun Icon (Show in Dark Mode) -->
+                        <svg class="w-5 h-5 sun-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <!-- Moon Icon (Show in Light Mode) -->
+                        <svg class="w-5 h-5 moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    </button>
+                    <button data-tally-open="ob9B11" data-tally-layout="modal" data-tally-width="500" data-tally-align-left="1" data-tally-hide-title="1" data-tally-transparent-background="1" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-hover transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        Join Waitlist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 fade-in">
+                <h1 class="text-4xl sm:text-5xl font-bold tracking-tighter mb-6">Engineering Blog</h1>
+                <p class="text-xl text-gray-600">Thoughts on infrastructure, pricing, and building for the next billion developers.</p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Article 1 -->
+                <article class="group fade-in-scroll">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-8 mb-2">
+                        <time class="text-sm font-mono text-gray-500 whitespace-nowrap">Nov 28, 2024</time>
+                        <h2 class="text-2xl font-bold group-hover:text-primary transition-colors">
+                            <a href="#" class="block">Why we built Stackshift</a>
+                        </h2>
+                    </div>
+                    <p class="text-gray-600 mb-4 sm:ml-32 leading-relaxed">
+                        The current state of cloud hosting is broken. You either pay a premium for DX (Vercel) or suffer through complexity (AWS). We think there's a third way.
+                    </p>
+                    <div class="sm:ml-32">
+                        <a href="#" class="text-sm font-medium text-primary hover:underline">Read more →</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="group fade-in-scroll animation-delay-100">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-8 mb-2">
+                        <time class="text-sm font-mono text-gray-500 whitespace-nowrap">Nov 15, 2024</time>
+                        <h2 class="text-2xl font-bold group-hover:text-primary transition-colors">
+                            <a href="#" class="block">The state of cloud hosting in Africa</a>
+                        </h2>
+                    </div>
+                    <p class="text-gray-600 mb-4 sm:ml-32 leading-relaxed">
+                        Latency matters. Why serving your users from Frankfurt when they live in Lagos is costing you conversions, and how we're solving it with local regions.
+                    </p>
+                    <div class="sm:ml-32">
+                        <a href="#" class="text-sm font-medium text-primary hover:underline">Read more →</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="group fade-in-scroll animation-delay-200">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-8 mb-2">
+                        <time class="text-sm font-mono text-gray-500 whitespace-nowrap">Nov 01, 2024</time>
+                        <h2 class="text-2xl font-bold group-hover:text-primary transition-colors">
+                            <a href="#" class="block">Transparent pricing vs. Bill shock</a>
+                        </h2>
+                    </div>
+                    <p class="text-gray-600 mb-4 sm:ml-32 leading-relaxed">
+                        We analyzed 500 developer bills from major PaaS providers. The results were terrifying. Here's how our "Capped by Default" model works.
+                    </p>
+                    <div class="sm:ml-32">
+                        <a href="#" class="text-sm font-medium text-primary hover:underline">Read more →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-background border-t border-border py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-lg font-bold tracking-tighter">stackshift<span class="text-primary">.cloud</span></span>
+                    <p class="text-sm text-gray-500 mt-1">Shift your stack. Ship anywhere.</p>
+                </div>
+                <div class="flex space-x-6 text-sm text-gray-600">
+                    <a href="#" class="hover:text-text">Twitter</a>
+                    <a href="#" class="hover:text-text">GitHub</a>
+                    <a href="blog.html" class="hover:text-text">Blog</a>
+                    <a href="#" class="hover:text-text">Privacy</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center md:text-left text-xs text-gray-400">
+                &copy; 2024 Stackshift. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

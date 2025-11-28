@@ -45,23 +45,75 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
-observer.observe(terminalContent);
+if (terminalContent) observer.observe(terminalContent);
 
 
-// Fade-in on scroll
-const fadeObserver = new IntersectionObserver((entries) => {
+// Theme Toggle
+const themeToggleBtn = document.getElementById('theme-toggle');
+const html = document.documentElement;
+
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        html.classList.add('dark');
+        updateThemeIcon(true);
+    } else {
+        html.classList.remove('dark');
+        updateThemeIcon(false);
+    }
+}
+
+function toggleTheme() {
+    if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+        updateThemeIcon(false);
+    } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        updateThemeIcon(true);
+    }
+}
+
+function updateThemeIcon(isDark) {
+    if (!themeToggleBtn) return;
+    // Simple SVG swap or class toggle could go here
+    // For now, let's assume the button contains both SVGs and we toggle hidden classes
+    const sunIcon = themeToggleBtn.querySelector('.sun-icon');
+    const moonIcon = themeToggleBtn.querySelector('.moon-icon');
+    
+    if (isDark) {
+        sunIcon?.classList.remove('hidden');
+        moonIcon?.classList.add('hidden');
+    } else {
+        sunIcon?.classList.add('hidden');
+        moonIcon?.classList.remove('hidden');
+    }
+}
+
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleTheme);
+}
+
+initTheme();
+
+// Scroll Reveal Animation
+const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in');
-            entry.target.style.opacity = '1';
-            fadeObserver.unobserve(entry.target);
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target); // Run once
         }
     });
-}, { threshold: 0.1 });
+}, {
+    threshold: 0.15, // Trigger when 15% visible
+    rootMargin: '0px 0px -50px 0px' // Offset slightly so it triggers before bottom
+});
 
-document.querySelectorAll('.fade-in-scroll').forEach(el => {
-    el.style.opacity = '0';
-    fadeObserver.observe(el);
+document.querySelectorAll('.reveal').forEach(el => {
+    revealObserver.observe(el);
 });
 
 

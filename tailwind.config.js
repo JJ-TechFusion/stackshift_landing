@@ -1,16 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: ["./*.{html,js}"],
   theme: {
     extend: {
       colors: {
-        primary: "#0066FF", // Electric Blue
-        "primary-hover": "#0052CC",
-        "primary-light": "#E6F0FF",
-        background: "#FAFAFA",
-        surface: "#FFFFFF",
-        text: "#0A0A0A",
-        border: "#E5E5E5",
+        primary: "rgb(var(--color-primary) / <alpha-value>)", // Electric Blue
+        "primary-hover": "rgb(var(--color-primary-hover) / <alpha-value>)",
+        "primary-light": "rgb(var(--color-primary-light) / <alpha-value>)",
+        background: "rgb(var(--color-background) / <alpha-value>)",
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        text: "rgb(var(--color-text) / <alpha-value>)",
+        border: "rgb(var(--color-border) / <alpha-value>)",
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

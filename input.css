@@ -3,6 +3,26 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-primary: 0 102 255; /* #0066FF */
+    --color-primary-hover: 0 82 204; /* #0052CC */
+    --color-primary-light: 230 240 255; /* #E6F0FF */
+    --color-background: 250 250 250; /* #FAFAFA */
+    --color-surface: 255 255 255; /* #FFFFFF */
+    --color-text: 10 10 10; /* #0A0A0A */
+    --color-border: 229 229 229; /* #E5E5E5 */
+  }
+
+  .dark {
+    --color-primary: 59 130 246; /* #3B82F6 (Lighter blue for dark mode) */
+    --color-primary-hover: 96 165 250; /* #60A5FA */
+    --color-primary-light: 30 58 138; /* #1E3A8A (Darker blue bg) */
+    --color-background: 5 5 5; /* #050505 (Darker background) */
+    --color-surface: 10 10 10; /* #0A0A0A (Darker surface) */
+    --color-text: 250 250 250; /* #FAFAFA */
+    --color-border: 23 23 23; /* #171717 (Much subtler border) */
+  }
+
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
@@ -18,6 +38,28 @@
   }
 }
 
+@layer components {
+  /* Base reveal state: invisible and shifted down */
+  .reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  /* Active state: visible and in place */
+  .reveal.active {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Stagger delays */
+  .delay-100 { transition-delay: 100ms; }
+  .delay-200 { transition-delay: 200ms; }
+  .delay-300 { transition-delay: 300ms; }
+  
+  /* Hover lift effect for cards */
+  .hover-lift {
+    @apply transition-transform duration-300 ease-out hover:-translate-y-1;
+  }
+}
+
 @layer utilities {
   .animation-delay-100 {
     animation-delay: 100ms;
@@ -27,5 +69,17 @@
   }
   .animation-delay-300 {
     animation-delay: 300ms;
+  }
+  
+  .bg-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
 }
